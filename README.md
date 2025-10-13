@@ -3,7 +3,7 @@
 ## Overview & Objectives
 
 This project is the result of an assignment for the Data Mining module of my MSc in Computer Science with Data Analytics. It focuses on applying data mining and machine learning techniques to a banking dataset in order to explore customer behavior and credit card eligibility. It addresses two main problem areas:
-<ul><li><b>Profiles</b> — identifying and definining <b>two customer segments</b>b> with a <b>high likelihood of attrition</b></li>
+<ul><li><b>Profiles</b> — identifying and definining <b>two customer segments</b> with a <b>high likelihood of attrition</b></li>
 <li><b>Age</b> — evaluateing whether age is a <b>reliable predictor of credit card eligibility</b>, compared to other variables</li></ul>
 
 The work applies statistical analysis, visualization, and machine learning models to extract insights that can support strategic decisions in the banking sector.
@@ -36,15 +36,15 @@ The dataset contains anonymized information about bank customers. Each record re
 
 The <b>Exited variable</b> serves as the target label, where a value of <b>1</b> represents <b>customers who have left (churned)</b> and <b>0</b> represents <b>customers who have stayed with the bank</b>.
 
-I initially imported <b>pandas</b>, <b>numpy</b>, <b>seaborn</b>, and <b>matplotlib.pyplot</b> for analysis. The dataset was clean, with no missing or duplicate values, though I renamed the Geography feature to Country and removed only two outliers in the <i>Number_of_Children</i> attribute.
+The dataset was clean, with no missing or duplicate values. I just renamed the <i>Geography</i> feature to <i>Country</i> and removed only two outliers in the <i>Number_of_Children</i> attribute.
 
 ## Language & Libraries
 
 <b>Language</b>: Python 3<br><br>
 <b>Libraries</b>: 
-<ul><li>pandas, numpy — data manipulation</li>
-<li>matplotlib, seaborn — visualization</li>
-<li>scikit-learn — machine learning (Decision Trees, Logistic Regression, Gradient Boosting, KMeans and SMOTE)</li></ul>
+<ul><li>pandas and numpy for data manipulation</li>
+<li>matplotlib and seaborn for visualization</li>
+<li>scikit-learn for machine learning (Decision Trees, Logistic Regression, Gradient Boosting, KMeans and SMOTE)</li></ul>
 
 ## Results
 
