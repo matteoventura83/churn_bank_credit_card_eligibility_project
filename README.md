@@ -1,4 +1,4 @@
-# Data Mining for Customer Attrition and Credit Card Eligibility in the Banking Sector
+# Data Mining project for Customer Attrition and Credit Card Eligibility in the Banking Sector
 
 ## Overview & Objectives
 
