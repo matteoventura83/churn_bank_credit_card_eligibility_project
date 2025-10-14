@@ -2,7 +2,7 @@
 
 ## Overview & Objectives
 
-This project is the result of an assignment for the Data Mining module of my MSc in Computer Science with Data Analytics. It focuses on applying data mining and machine learning techniques to a banking dataset in order to explore customer behavior and credit card eligibility. It addresses two main problem areas:
+This project is the result of my assignment for the Data Mining module of my MSc in Computer Science with Data Analytics. It focuses on applying data mining and machine learning techniques to a banking dataset in order to explore customer behavior and credit card eligibility. It addresses two main problem areas:
 <ul><li><b>Profiles</b> — identifying and definining <b>two customer segments</b> with a <b>high likelihood of attrition</b></li>
 <li><b>Age</b> — evaluateing whether age is a <b>reliable predictor of credit card eligibility</b>, compared to other variables</li></ul>
 
