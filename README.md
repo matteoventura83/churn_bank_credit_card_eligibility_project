@@ -71,7 +71,9 @@ To validate this pattern, I used the <b>KMeans clustering technique</b> by selec
 
 ### Age as Credit Card Eligibility Predictor
 
-After seeing how important <i>Age</i> was in the profile problem, I wanted to check if it also played a key role in predicting credit card eligibility. To do this, I compared <i>Age</i> with other features. Since the visual and correlation analyses didn’t show much, I trained a <b>Decision Tree Classifier</b> on all variables. Using <b>SMOTE</b> to balance the data improved accuracy from 58% to 69%, and the model showed that <i>Credit_Score</i> and <i>Account_Length</i> were stronger predictors than <i>Age</i>. This also matched what’s generally seen in the banking industry.
+After seeing how important the <i>Age</i> variable was in identifying the customer segments with a high attrition, it was interesting to check how it would perform in predicting credit card eligibility. 
+
+The first task was identifying two other features to compare with <i>Age</i>. Unfortunately this time visualization techniques, bivariate and multivariate analysis did not provide valuable insights, so I decided to use the Decision Tree Classifier across all variables. Also in this case the SMOTE technique, oversampling the minority class <i>Exited: yes</i>, proved to be useful, improving the model’s accuracy from 58% to 69%. Based on the results, I selected the features Credit_Score (ranked 1st) and Account_Length (ranked 2nd), which also outperformed Age (ranked 6th). To support this finding also the fact they are both considered among the best predictors by the banking industry.
 
 Next, I ran a <b>Logistic Regression model</b> to see which features had the most influence. Using <i>Credit_Card</i> as the target, the results confirmed that <i>Credit_Score</i>, <i>Age</i>, and <i>Account_Length</i> were the top predictors, with precision scores of 71%, 70%, and 69%.
 
