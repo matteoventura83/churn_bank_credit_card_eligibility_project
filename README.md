@@ -4,7 +4,7 @@
 
 This project is the result of my assignment for the Data Mining module of my MSc in Computer Science with Data Analytics. It focuses on applying data mining and machine learning techniques to a banking dataset in order to explore customer behavior and credit card eligibility. It addresses two main problem areas:
 <ul><li><b>Profiles</b>: identifying and definining two customer segments with a high likelihood of attrition</li>
-<li><b>Age</b>: evaluateing whether age is a reliable predictor of credit card eligibility, compared to other variables</li></ul>
+<li><b>Age</b>: evaluating whether age is a reliable predictor of credit card eligibility, compared to other variables</li></ul>
 
 This work applies statistical analysis, visualization, and machine learning models to extract insights that can support strategic decisions in the banking sector.
 
