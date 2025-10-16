@@ -61,14 +61,12 @@ I wanted further confirmation of these outcomes. I turned categorical variables 
 
 <br>
 
-- <b>Profile 2: customers aged between 40 and 59 with a credit score rate between 350 and 559</b><br> 
+- <b>Profile 2</b>: customers aged between 40 and 59 with a credit score rate between 350 and 559<br> 
 <b>Attrition rate: 46.54%</b> (229 out of 493).
 
-My first thought was that the second profile would also revolve around the dataset’s most important feature: <i>Age</i>. It was already clear that customers over 40 had higher attrition rates. To explore this further, I looked at how <i>Age</i> related to other features using different visualization techniques. Once again, the <b>Pairplot</b> provided the first clue — it showed a group of <i>Exited</i> customers aged between 40 and 59 with noticeably low credit scores.
+I initially hypothesized that the second profile should also be built around what I considered the most significant variable: <i>Age</i>. In particular, it was becoming increasingly evident that the attrition rate was strongly related to people over the age of 40. For this reason, I analyzed again the correlation of <i>Age</i> with other features using various visualization techniques. Pairplot, in particular, helped me identify a potential cluster of <i>Exited</i> customers aged 40–59 with very low credit scores.
 
-To check this pattern, I used the <b>KMeans clustering technique</b> with <i>Age</i> and <i>Credit_Score</i> as inputs. After testing up to ten clusters, the “elbow method” showed that four clusters worked best. When I looked at cluster no. 2, I found that the <i>Credit_Score</i> values ranged from 350 to 559.
-
-Next, I ran a bivariate analysis with a <b>pivot table</b>, combining the four clusters with the <i>Age_Range</i> feature I had used earlier. By calculating the mean, count, and sum of <i>Exited</i> customers, I confirmed that cluster no. 2 — customers aged 40–59 — had the highest attrition rate: 46.54% (229 out of 493).
+To validate this pattern, I used the <b>KMeans clustering technique</b> by selecting the features <i>Age</i> and <i>Credit_Score</i>. The "elbow method" showed that the number of four clusters was the optimal solution, and when I examined all of them, I noticed the minimum and maximum values of cluster n. 2 ranged from 350 to 559. Consequently, I started a bivariate analysis by using the pivot table, combining the four clusters and the <i>Age_Range</i> variable created for the first profile and analysing the number of <i>Exited</i> customers using the aggregate functions <i>mean</i>, <i>count</i> and <i>sum</i>. In cluster n. 2 the age group of 40-59 confirmed the highest attrition rate: 46.54% (229 out of 493).
 
 
 ### Age as Credit Card Eligibility Predictor
