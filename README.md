@@ -34,9 +34,7 @@ The dataset contains anonymized information about bank customers. Each record re
   <li>Exited</li>
 </ul>
 
-<b>Exited</b> is the dependent variable, where a value of <b>1</b> represents <b>customers who have left (churned)</b> and <b>0</b> represents <b>customers who have stayed with the bank</b>.
-
-The dataset was clean, with no missing or duplicate values. I just renamed the <i>Geography</i> feature to <i>Country</i> and removed only two outliers (14 and 19) in the <i>Number_of_Children</i> attribute, as I assessed them as data entry errors.
+<b><i>Exited</i></b> is the dependent variable, where a value of <b>1</b> represents <b>customers who have left</b> and <b>0</b> represents <b>customers who have stayed with the bank</b>.
 
 ## Language & Libraries
 
@@ -53,13 +51,14 @@ The dataset was clean, with no missing or duplicate values. I just renamed the <
 - <b>Profile 1</b>: women from the Netherlands aged between 40 and 59<br>
 <b>Attrition rate: 58.81%</b> (257 out of 437).
 
-I performed univariate, bivariate, and multivariate analyses to explore and understand the distribution of the variables. For the numerical features <i>Age</i>, <i>Total_Income</i>, <i>Years_Employed</i>, <i>Credit_Score</i>, and <i>Balance</i>, I even created tailored ranges in order to obtain clearer insights. The <b>Pairplot</b> technique, with the <i>Exited</i> feature serving as the hue, highlighted a high attrition rate in 40-59 age range across all the numerical features. At this point, I was already confident that <i>Age</i> would be the most important feature and that the first profile should have been built around it.
+The dataset was clean, with no missing or duplicate values. I just renamed the <i>Geography</i> feature to <i>Country</i> and removed only two outliers (14 and 19) in the <i>Number_of_Children</i> attribute, as I assessed them as data entry errors.
+
+I performed <b>univariate, bivariate, and multivariate analyses</b> to explore and understand the distribution of the variables. For the numerical features <i>Age</i>, <i>Total_Income</i>, <i>Years_Employed</i>, <i>Credit_Score</i>, and <i>Balance</i>, I even created tailored ranges in order to obtain clearer insights. The <b>Pairplot</b> technique, with the <i>Exited</i> feature serving as the hue, highlighted a high attrition rate in 40-59 age range across all the numerical features. At this point, I was already confident that <i>Age</i> would be the most important feature and that the first profile should have been built around it.
 
 I further explored the correlation between <i>Age</i> and other features with bar charts and pivot tables. In the latter, the aggregate functions <i>mean</i>, <i>count</i> and <i>sum</i> helped me to analyse the number of <i>Exited</i> customers, whose results reinfoirced my initial assumption. In particular, it was the combination of <i>Age</i>, <i>Country</i> and <i>Gender</i> features to provide the most impactful results, revealing that women aged 40–59 from the Netherlands had an attrition rate of 58.81% (257 of 437 customers).
 
 I wanted further confirmation of these outcomes. I turned categorical variables into numbers using the <b>One Hot Encoding (get_dummies)</b> method and ran a <b>Decision Tree Classifier</b> with a 20% test split. The model reached 82% accuracy, but recall and precision metrics for the <i>Exited: Yes</i> class were much lower (36% and 53%), indicating the model was struggling to correctly predict and identify positive cases. After unsuccessfully fine-tuning hyperparameters, I suspected the main issue was the dataset's imbalance. To fix this problem, I oversampled the minority class <i>Exited</i> using the <b>SMOTE technique</b>, fine-tuned the hyperparameters again, and the model's performance improved significantly: <i>Exited</i> precision was 87% and recall was 76%. The feature importance analysis confirmed that <i>Age</i> (1st position, 32%), <i>Country_Netherlands</i> (3rd position, 11%), and <i>Gender_Female</i> (4th position, 10%) remained the most influential features in the dataset, confirming the profile I discovered earlier.
 
-<b>Feature importance analysis</b> confirmed that <i>Age</i> (1st, 32%), <i>Country_Netherlands</i> (3rd, 11%), and <i>Gender_Female</i> (4th, 10%) were still among the top predictors, backing up the profile I’d already found.
 <br><br>
 
 - <b>Profile 2: customers aged between 40 and 59 with a credit score rate between 350 and 559</b><br> 
