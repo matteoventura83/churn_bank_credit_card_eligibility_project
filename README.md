@@ -44,16 +44,18 @@ The dataset was clean, with no missing or duplicate values. I just renamed the <
 <b>Libraries</b>: 
 <ul><li><b>Pandas</b> and <b>Numpy</b> for data manipulation</li>
 <li><b>Matplotlib</b> and <b>Seaborn</b></li> for visualization</li>
-<li>scikit-learn for machine learning (Decision Trees, Logistic Regression, Gradient Boosting, KMeans and SMOTE)</li></ul>
+<li><b>Scikit-learn</b> for machine learning (Decision Trees, Logistic Regression, Gradient Boosting, KMeans and SMOTE)</li></ul>
 
 ## Results
 
 ### Customer Profiles
 
-- <b>Profile 1: women from the Netherlands aged between 40 and 59</b><br>
+- <b>Profile 1</b>: women from the Netherlands aged between 40 and 59<br>
 <b>Attrition rate: 58.81%</b> (257 out of 437).
 
-I performed univariate, bivariate, and multivariate analyses to explore variable distributions and relationships. Using visualization techniques such as <b>Pairplots</b>, I observed a high attrition rate among customers aged 40–59. Further analysis with bar charts and pivot tables confirmed that the combination of <i>Age</i>, <i>Country</i>, and <i>Gender</i> was most significant, revealing that women aged 40–59 from the Netherlands had an attrition rate of 58.81% (257 of 437 customers).
+I performed univariate, bivariate, and multivariate analyses to explore and understand the distribution of the variables. For the numerical features <i>Age</i>, <i>Total_Income</i>, <i>Years_Employed</i>, <i>Credit_Score</i>, and <i>Balance</i>, I also created tailored ranges in order to obtain clearer insights. The <b>Pairplot</b> technique, with the <i>Exited</i> feature serving as the hue, highlighted a high attrition rate in 40-59 age range across all the numerical features.
+
+At this point, I was already confident that <i>Age</i> would be the most important feature and that the first profile should have been built around it. For this reason, I further explored the correlation between Age and other features with bar charts and pivot tables. In the latter, the aggregate functions mean, count and sum helped me to analyse the number of Exited customers, whose results reinfoirced my initial assumption. In particular, it was the pivot table analysis based on the combination of <i>Age</i>, <i>Country</i> and <i>Gender</i> features to provide the best insights, revealing that women aged 40–59 from the Netherlands had an attrition rate of 58.81% (257 of 437 customers).
 
 To confirm these results, I turned categorical variables into numbers using the <b>One Hot Encoding (get_dummies)</b> method and ran a <b>Decision Tree Classifier</b> with a 20% test split. The model reached 82% accuracy, but that alone didn’t tell the whole story — recall and precision for the <i>Exited: Yes</i> class were much lower (36% and 53%), showing the model struggled to spot customers who actually left.
 
