@@ -6,7 +6,7 @@ This project is the result of my assignment for the Data Mining module of my MSc
 <ul><li><b>Profiles</b> — identifying and definining <b>two customer segments</b> with a <b>high likelihood of attrition</b></li>
 <li><b>Age</b> — evaluateing whether age is a <b>reliable predictor of credit card eligibility</b>, compared to other variables</li></ul>
 
-The work applies statistical analysis, visualization, and machine learning models to extract insights that can support strategic decisions in the banking sector.
+This work applies statistical analysis, visualization, and machine learning models to extract insights that can support strategic decisions in the banking sector.
 
 ## Dataset
 
@@ -34,16 +34,16 @@ The dataset contains anonymized information about bank customers. Each record re
   <li>Exited</li>
 </ul>
 
-The <b>Exited variable</b> serves as the target label, where a value of <b>1</b> represents <b>customers who have left (churned)</b> and <b>0</b> represents <b>customers who have stayed with the bank</b>.
+<b>Exited</b> is the dependent variable, where a value of <b>1</b> represents <b>customers who have left (churned)</b> and <b>0</b> represents <b>customers who have stayed with the bank</b>.
 
-The dataset was clean, with no missing or duplicate values. I just renamed the <i>Geography</i> feature to <i>Country</i> and removed only two outliers in the <i>Number_of_Children</i> attribute.
+The dataset was clean, with no missing or duplicate values. I just renamed the <i>Geography</i> feature to <i>Country</i> and removed only two outliers (14 and 19) in the <i>Number_of_Children</i> attribute, as I assessed them as data entry errors.
 
 ## Language & Libraries
 
 <b>Language</b>: Python 3<br><br>
 <b>Libraries</b>: 
-<ul><li>pandas and numpy for data manipulation</li>
-<li>matplotlib and seaborn for visualization</li>
+<ul><li><b>Pandas</b> and <b>Numpy</b> for data manipulation</li>
+<li><b>Matplotlib</b> and <b>Seaborn</b></li> for visualization</li>
 <li>scikit-learn for machine learning (Decision Trees, Logistic Regression, Gradient Boosting, KMeans and SMOTE)</li></ul>
 
 ## Results
