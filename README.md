@@ -41,7 +41,7 @@ The dataset contains anonymized information about bank customers. Each record re
 <b>Language</b>: Python 3<br><br>
 <b>Libraries</b>: 
 <ul><li><b>Pandas</b> and <b>Numpy</b> for data manipulation</li>
-<li><b>Matplotlib</b> and <b>Seaborn</b></li> for visualization</li>
+<li><b>Matplotlib</b> and <b>Seaborn</b> for visualization</li>
 <li><b>Scikit-learn</b> for machine learning (Decision Trees, Logistic Regression, Gradient Boosting, KMeans and SMOTE)</li></ul>
 
 ## Results
